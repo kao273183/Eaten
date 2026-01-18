@@ -442,21 +442,200 @@ footer {
 }
 
 /* Responsive */
+
+/* Tablet & Smaller Desktops */
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .phone-frame {
+        width: 240px;
+        height: 500px;
+    }
+}
+
+/* Mobile Devices */
 @media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Alternative simple mobile nav: just show CTA or stack */
+    /* Uncomment below to stack instead of hide
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+    }
+    */
+
+    /* For this version, let's keep the logo and maybe the download button visible if possible, 
+       or just simplify the header layout */
+    nav {
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+        /* Simple "landing page" often hides nav links on mobile to focus on CTA in hero */
+    }
+
+    .hero {
+        padding-top: 100px;
+        text-align: center;
+        /* Ensure content isn't clipped now that we have a tall stack */
+        height: auto;
+        overflow: visible;
+    }
+
     .hero-content {
         flex-direction: column;
         text-align: center;
+        gap: 60px;
     }
 
     .hero-text h1 {
         font-size: 2.5rem;
     }
 
+    .hero-text p {
+        margin: 0 auto 30px;
+    }
+
     .cta-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Independent Block Layout for Phones */
+    .hero-image {
+        /* Let content dictate height so nothing is cut off */
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        align-items: center;
+        overflow: visible;
+        display: block;
+        /* Simpler container */
+    }
+
+    .phones-container {
+        /* Flex column to stack them initially, but we use margins to overlap */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .phone-frame {
+        /* Relative positioning to take up real space in the DOM */
+        position: relative;
+        width: 220px;
+        height: 460px;
+        border-width: 3px;
+        border-radius: 30px;
+        left: auto;
+        top: auto;
+        /* Reset any absolute position coordinates */
+    }
+
+    .screen {
+        border-radius: 25px;
+    }
+
+    .phone-back {
+        /* Top item in the stack */
+        transform: rotate(-5deg);
+        z-index: 1;
+        margin-bottom: 0;
+    }
+
+    .phone-front {
+        /* Bottom item in the stack, pulled up to overlap */
+        margin-top: -380px;
+        /* Strong overlap */
+        transform: rotate(5deg) translateX(40px);
+        z-index: 2;
+    }
+
+    /* Small hover effect within bounds */
+    .phones-container:hover .phone-back {
+        transform: rotate(-8deg) translateX(-10px);
+    }
+
+    .phones-container:hover .phone-front {
+        transform: rotate(8deg) translateX(50px);
+    }
+
+    .features {
+        padding: 60px 0;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .footer-content {
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        margin-top: 0;
+    }
+
+    .phone-frame {
+        width: 180px;
+        height: 380px;
+    }
+
+    .phone-back {
+        transform: rotate(-5deg);
+    }
+
+    .phone-front {
+        margin-top: -320px;
+        /* Adjusted overlap for smaller height */
+        transform: rotate(5deg) translateX(30px);
+    }
+
+    .store-btn {
+        width: 100%;
         justify-content: center;
     }
 
-    .hero-text p {
-        margin: 0 auto 40px;
+    .features-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
     }
 }
