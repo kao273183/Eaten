@@ -4,13 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>吃吃帖 Eaten - 你的美食地圖</title>
+    <title data-i18n="page_title">吃吃帖 Eaten - 你的美食地圖</title>
     <link rel="icon" type="image/png" href="assets/app_icon.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6006600875700960"
         crossorigin="anonymous"></script>
+    <style>
+        .lang-switch {
+            margin-left: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-switch:hover {
+            background-color: #f5f5f5;
+            color: #FF9800;
+            border-color: #FF9800;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,12 +38,13 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="assets/app_icon.png" alt="Eaten Logo"> 吃吃帖
+                    <img src="assets/app_icon.png" alt="Eaten Logo"> <span data-i18n="app_name">吃吃帖 Eaten</span>
                 </div>
                 <div class="nav-links">
-                    <a href="#features">功能介紹</a>
-                    <a href="#guide">使用教學</a>
-                    <a href="#download" class="btn-primary">立即下載</a>
+                    <a href="#features" data-i18n="nav_features">功能介紹</a>
+                    <a href="#guide" data-i18n="nav_guide">使用教學</a>
+                    <a href="#download" class="btn-primary" data-i18n="nav_download">立即下載</a>
+                    <button id="langToggle" class="lang-switch">EN / 中</button>
                 </div>
             </nav>
         </div>
@@ -32,8 +53,8 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>探索城市中的<br><span class="highlight">隱藏美食</span></h1>
-                <p>不再煩惱吃什麼！「吃吃帖」為你精選每日美食，探索附近好店，記錄你的美食足跡。</p>
+                <h1 data-i18n="hero_title">探索城市中的<br><span class="highlight">隱藏美食</span></h1>
+                <p data-i18n="hero_subtitle">不再煩惱吃什麼！「吃吃帖」為你精選每日美食，探索附近好店，記錄你的美食足跡。</p>
                 <div class="cta-buttons">
                     <div class="store-btn disabled">
                         <i class="fa-brands fa-apple"></i>
@@ -70,35 +91,35 @@
 
     <section id="features" class="features">
         <div class="container">
-            <h2>為什麼選擇吃吃帖？</h2>
+            <h2 data-i18n="features_title">為什麼選擇吃吃帖？</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="icon-box">
                         <i class="fa-solid fa-fire"></i>
                     </div>
-                    <h3>每日精選</h3>
-                    <p>每日推薦 5 家精選美食，左滑跳過、右滑收藏，輕鬆決定下一餐。</p>
+                    <h3 data-i18n="feature_1_title">今日精選</h3>
+                    <p data-i18n="feature_1_desc">每日推薦 5 家精選美食，左滑跳過、右滑收藏，輕鬆決定下一餐。</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon-box">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
-                    <h3>附近美食</h3>
-                    <p>依據您的所在位置，即時推薦周邊的熱門美食貼文與隱藏好店。</p>
+                    <h3 data-i18n="feature_2_title">附近美食</h3>
+                    <p data-i18n="feature_2_desc">依據您的所在位置，即時推薦周邊的熱門美食貼文與隱藏好店。</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon-box">
                         <i class="fa-solid fa-share-nodes"></i>
                     </div>
-                    <h3>社群分享</h3>
-                    <p>分享你的美食心得，還可以一鍵生成精美分享圖，邀請朋友一起去吃！</p>
+                    <h3 data-i18n="feature_3_title">社群分享</h3>
+                    <p data-i18n="feature_3_desc">分享你的美食心得，還可以一鍵生成精美分享圖，邀請朋友一起去吃！</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon-box">
                         <i class="fa-solid fa-bookmark"></i>
                     </div>
-                    <h3>專屬清單</h3>
-                    <p>建立你的口袋名單，再也不怕忘記好吃的店在哪裡。</p>
+                    <h3 data-i18n="feature_4_title">專屬清單</h3>
+                    <p data-i18n="feature_4_desc">建立你的口袋名單，再也不怕忘記好吃的店在哪裡。</p>
                 </div>
             </div>
         </div>
@@ -106,40 +127,41 @@
 
     <section id="guide" class="guide-section">
         <div class="container">
-            <h2>如何開始</h2>
+            <h2 data-i18n="guide_title">如何開始</h2>
             <div class="guide-steps">
                 <div class="step-card">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h3>下載並註冊</h3>
-                        <p>安裝 App 後，使用 Google 或 Apple 帳號快速登入，只需幾秒鐘即可開始。</p>
+                        <h3 data-i18n="step_1_title">下載並註冊</h3>
+                        <p data-i18n="step_1_desc">安裝 App 後，使用 Google 或 Apple 帳號快速登入，只需幾秒鐘即可開始。</p>
                     </div>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>發布第一篇美食</h3>
-                        <p>點擊「+」按鈕，上傳照片、選擇餐廳，並寫下你的真實評價。第一篇貼文還能獲得額外獎勵！</p>
+                        <h3 data-i18n="step_2_title">發布第一篇美食</h3>
+                        <p data-i18n="step_2_desc">點擊「+」按鈕，上傳照片、選擇餐廳，並寫下你的真實評價。第一篇貼文還能獲得額外獎勵！</p>
                     </div>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h3>探索附近美食</h3>
-                        <p>根據您的定位顯示附近的美食文章。喜歡的店可以收藏，下次直接導航去吃。</p>
+                        <h3 data-i18n="step_3_title">探索附近美食</h3>
+                        <p data-i18n="step_3_desc">根據您的定位顯示附近的美食文章。喜歡的店可以收藏，下次直接導航去吃。</p>
                     </div>
                 </div>
             </div>
             <div class="guide-note">
-                <p><i class="fa-solid fa-circle-info"></i> 目前版本為剛上線，若無貼文屬正常現象，歡迎成為第一位分享者！</p>
+                <p><i class="fa-solid fa-circle-info"></i> <span
+                        data-i18n="guide_note">目前版本為剛上線，若無貼文屬正常現象，歡迎成為第一位分享者！</span></p>
             </div>
         </div>
     </section>
 
     <section class="download-section" id="download">
         <div class="container">
-            <h2>準備好開始美食之旅了嗎？</h2>
-            <p>目前 Android 版本開放內測中，iOS 版本敬請期待！</p>
+            <h2 data-i18n="download_title">準備好開始美食之旅了嗎？</h2>
+            <p data-i18n="download_subtitle">目前 Android 版本開放內測中，iOS 版本敬請期待！</p>
             <div class="cta-buttons centered">
                 <div class="store-btn white-btn disabled">
                     <i class="fa-brands fa-apple"></i>
@@ -156,28 +178,29 @@
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2>聯絡我們 / 加入內測</h2>
+            <h2 data-i18n="contact_title">聯絡我們 / 加入內測</h2>
             <div class="contact-content">
                 <div class="contact-card">
                     <i class="fa-brands fa-google"></i>
-                    <h3>加入內測計畫</h3>
-                    <p>目前 Android 版本開放內測。</p>
-                    <p>1. 先加入 Google Group 群組：</p>
-                    <a href="https://groups.google.com/g/eaten-foodmap" target="_blank" class="email-link">加入測試群組</a>
-                    <p style="margin-top: 10px;">2. 前往 Google Play 下載：</p>
+                    <h3 data-i18n="contact_beta_title">加入內測計畫</h3>
+                    <p data-i18n="contact_beta_desc">目前 Android 版本開放內測。</p>
+                    <p data-i18n="contact_beta_step1">1. 先加入 Google Group 群組：</p>
+                    <a href="https://groups.google.com/g/eaten-foodmap" target="_blank" class="email-link"
+                        data-i18n="contact_beta_btn1">加入測試群組</a>
+                    <p style="margin-top: 10px;" data-i18n="contact_beta_step2">2. 前往 Google Play 下載：</p>
                     <a href="https://play.google.com/store/apps/details?id=com.antigravity.foodie_map" target="_blank"
-                        class="email-link">下載應用程式</a>
+                        class="email-link" data-i18n="contact_beta_btn2">下載應用程式</a>
                 </div>
                 <div class="contact-card">
                     <i class="fa-brands fa-apple"></i>
-                    <h3>iOS 版本</h3>
-                    <p>Apple 版本目前正在積極開發中。</p>
-                    <p>追蹤我們的最新消息，獲取上架通知！</p>
+                    <h3 data-i18n="contact_ios_title">iOS 版本</h3>
+                    <p data-i18n="contact_ios_desc1">Apple 版本目前正在積極開發中。</p>
+                    <p data-i18n="contact_ios_desc2">追蹤我們的最新消息，獲取上架通知！</p>
                 </div>
                 <div class="contact-card">
                     <i class="fa-solid fa-comments"></i>
-                    <h3>社群媒體</h3>
-                    <p>追蹤我們，獲取最新美食資訊、活動消息！</p>
+                    <h3 data-i18n="contact_social_title">社群媒體</h3>
+                    <p data-i18n="contact_social_desc">追蹤我們，獲取最新美食資訊、活動消息！</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/share/1ALY3mQfWJ/?mibextid=wwXIfr" target="_blank"
                             class="social-btn fb" aria-label="Facebook">
@@ -201,10 +224,10 @@
             <div class="footer-content">
                 <div class="footer-logo">吃吃帖 Eaten</div>
                 <div class="footer-links">
-                    <a href="#">關於我們</a>
+                    <a href="#" data-i18n="footer_about">關於我們</a>
                     <a href="https://www.notion.so/Privacy-Policy-2eb14fd96c0080e8a5c9ebf2d7349608?source=copy_link"
-                        target="_blank">隱私權政策</a>
-                    <a href="mailto:kao273173@gmail.com">聯絡我們</a>
+                        target="_blank" data-i18n="footer_privacy">隱私權政策</a>
+                    <a href="mailto:kao273173@gmail.com" data-i18n="footer_contact">聯絡我們</a>
                 </div>
                 <div class="copyright">
                     &copy; 2026 Eaten. All rights reserved.
@@ -212,6 +235,125 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const translations = {
+            zh: {
+                page_title: "吃吃帖 Eaten - 你的美食地圖",
+                app_name: "吃吃帖 Eaten",
+                nav_features: "功能介紹",
+                nav_guide: "使用教學",
+                nav_download: "立即下載",
+                hero_title: "探索城市中的<br><span class=\"highlight\">隱藏美食</span>",
+                hero_subtitle: "不再煩惱吃什麼！「吃吃帖」為你精選每日美食，探索附近好店，記錄你的美食足跡。",
+                features_title: "為什麼選擇吃吃帖？",
+                feature_1_title: "今日精選",
+                feature_1_desc: "每日推薦 5 家精選美食，左滑跳過、右滑收藏，輕鬆決定下一餐。",
+                feature_2_title: "附近美食",
+                feature_2_desc: "依據您的所在位置，即時推薦周邊的熱門美食貼文與隱藏好店。",
+                feature_3_title: "社群分享",
+                feature_3_desc: "分享你的美食心得，還可以一鍵生成精美分享圖，邀請朋友一起去吃！",
+                feature_4_title: "專屬清單",
+                feature_4_desc: "建立你的口袋名單，再也不怕忘記好吃的店在哪裡。",
+                guide_title: "如何開始",
+                step_1_title: "下載並註冊",
+                step_1_desc: "安裝 App 後，使用 Google 或 Apple 帳號快速登入，只需幾秒鐘即可開始。",
+                step_2_title: "發布第一篇美食",
+                step_2_desc: "點擊「+」按鈕，上傳照片、選擇餐廳，並寫下你的真實評價。第一篇貼文還能獲得額外獎勵！",
+                step_3_title: "探索附近美食",
+                step_3_desc: "根據您的定位顯示附近的美食文章。喜歡的店可以收藏，下次直接導航去吃。",
+                guide_note: "目前版本為剛上線，若無貼文屬正常現象，歡迎成為第一位分享者！",
+                download_title: "準備好開始美食之旅了嗎？",
+                download_subtitle: "目前 Android 版本開放內測中，iOS 版本敬請期待！",
+                contact_title: "聯絡我們 / 加入內測",
+                contact_beta_title: "加入內測計畫",
+                contact_beta_desc: "目前 Android 版本開放內測。",
+                contact_beta_step1: "1. 先加入 Google Group 群組：",
+                contact_beta_btn1: "加入測試群組",
+                contact_beta_step2: "2. 前往 Google Play 下載：",
+                contact_beta_btn2: "下載應用程式",
+                contact_ios_title: "iOS 版本",
+                contact_ios_desc1: "Apple 版本目前正在積極開發中。",
+                contact_ios_desc2: "追蹤我們的最新消息，獲取上架通知！",
+                contact_social_title: "社群媒體",
+                contact_social_desc: "追蹤我們，獲取最新美食資訊、活動消息！",
+                footer_about: "關於我們",
+                footer_privacy: "隱私權政策",
+                footer_contact: "聯絡我們"
+            },
+            en: {
+                page_title: "Eaten - Your Foodie Map",
+                app_name: "Eaten",
+                nav_features: "Features",
+                nav_guide: "Guide",
+                nav_download: "Download",
+                hero_title: "Discover Hidden<br><span class=\"highlight\">Gems Nearby</span>",
+                hero_subtitle: "Never worry about what to eat again! Eaten curates daily picks, explores nearby spots, and records your food journey.",
+                features_title: "Why Eaten?",
+                feature_1_title: "Daily Picks",
+                feature_1_desc: "Get 5 curated daily recommendations. Swipe left to skip, right to save. Deciding your next meal is easy!",
+                feature_2_title: "Nearby Gems",
+                feature_2_desc: "Discover popular food posts and hidden spots around your current location instantly.",
+                feature_3_title: "Social Share",
+                feature_3_desc: "Share your food reviews and generate beautiful shareable images to invite friends!",
+                feature_4_title: "Custom Lists",
+                feature_4_desc: "Build your own foodie bucket list and never forget where that amazing restaurant is.",
+                guide_title: "How to Start",
+                step_1_title: "Download & Sign Up",
+                step_1_desc: "Install the app and sign in quickly with Google or Apple. It only takes a few seconds.",
+                step_2_title: "Post Your First Review",
+                step_2_desc: "Tap the \"+\" button, upload photos, select the restaurant, and write your review. Earn rewards for your first post!",
+                step_3_title: "Explore Nearby",
+                step_3_desc: "See food posts based on your location. Save spots you like and navigate there directly next time.",
+                guide_note: "The app is newly launched. If you don't see posts yet, be the first to share!",
+                download_title: "Ready for your Foodie Journey?",
+                download_subtitle: "Android Beta is now open. iOS version coming soon!",
+                contact_title: "Contact / Join Beta",
+                contact_beta_title: "Join Beta Program",
+                contact_beta_desc: "Android Beta is open now.",
+                contact_beta_step1: "1. Join Google Group:",
+                contact_beta_btn1: "Join Test Group",
+                contact_beta_step2: "2. Download on Google Play:",
+                contact_beta_btn2: "Download App",
+                contact_ios_title: "iOS Version",
+                contact_ios_desc1: "The iOS version is under active development.",
+                contact_ios_desc2: "Follow us for the latest updates and launch notifications!",
+                contact_social_title: "Social Media",
+                contact_social_desc: "Follow us for the latest food news and events!",
+                footer_about: "About Us",
+                footer_privacy: "Privacy Policy",
+                footer_contact: "Contact Us"
+            }
+        };
+
+        let currentLang = localStorage.getItem('eaten_lang') || 'zh';
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            // Update Toggle Button Text
+            const btn = document.getElementById('langToggle');
+            btn.textContent = currentLang === 'zh' ? 'EN / 中' : '中文 / EN';
+
+            // Update html lang attribute
+            document.documentElement.lang = currentLang === 'zh' ? 'zh-Hant' : 'en';
+        }
+
+        document.getElementById('langToggle').addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            localStorage.setItem('eaten_lang', currentLang);
+            updateContent();
+        });
+
+        // Initialize
+        updateContent();
+    </script>
 </body>
 
 </html>
