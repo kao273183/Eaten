@@ -44,7 +44,10 @@
                     <a href="#features" data-i18n="nav_features">功能介紹</a>
                     <a href="#guide" data-i18n="nav_guide">使用教學</a>
                     <a href="#download" class="btn-primary" data-i18n="nav_download">立即下載</a>
-                    <button id="langToggle" class="lang-switch">EN / 中</button>
+                    <button id="langToggle" class="lang-switch" data-lang-toggle>EN / 中</button>
+                </div>
+                <div class="nav-mobile-lang">
+                    <button class="lang-switch mobile-only" data-lang-toggle>EN / 中</button>
                 </div>
             </nav>
         </div>
@@ -338,17 +341,21 @@
             });
 
             // Update Toggle Button Text
-            const btn = document.getElementById('langToggle');
-            btn.textContent = currentLang === 'zh' ? 'EN / 中' : '中文 / EN';
+            const btns = document.querySelectorAll('[data-lang-toggle]');
+            btns.forEach(btn => {
+                btn.textContent = currentLang === 'zh' ? 'EN / 中' : '中文 / EN';
+            });
 
             // Update html lang attribute
             document.documentElement.lang = currentLang === 'zh' ? 'zh-Hant' : 'en';
         }
 
-        document.getElementById('langToggle').addEventListener('click', () => {
-            currentLang = currentLang === 'zh' ? 'en' : 'zh';
-            localStorage.setItem('eaten_lang', currentLang);
-            updateContent();
+        document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentLang = currentLang === 'zh' ? 'en' : 'zh';
+                localStorage.setItem('eaten_lang', currentLang);
+                updateContent();
+            });
         });
 
         // Initialize

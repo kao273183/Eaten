@@ -76,6 +76,10 @@ nav {
     gap: 20px;
 }
 
+.nav-mobile-lang {
+    display: none;
+}
+
 .btn-primary {
     background: var(--gradient);
     color: var(--white);
@@ -601,7 +605,17 @@ footer {
     /* For this version, let's keep the logo and maybe the download button visible if possible, 
        or just simplify the header layout */
     nav {
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .nav-mobile-lang {
+        display: block;
+    }
+
+    .lang-switch.mobile-only {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        margin-left: 0;
     }
 
     .nav-links {
