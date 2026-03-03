@@ -161,13 +161,15 @@
                 <div class="phone-carousel">
                     <div class="phone-frame" id="phoneFrame">
                         <div class="carousel-track" id="carouselTrack">
-                            <img class="carousel-slide" src="assets/app_screen_1.png" alt="App Screenshot 1">
+                            <img class="carousel-slide active" src="assets/app_screen_1.png" alt="App Screenshot 1">
                             <img class="carousel-slide" src="assets/app_screen_2.png" alt="App Screenshot 2">
+                            <img class="carousel-slide" src="assets/app_screen_3.png" alt="App Screenshot 3">
                         </div>
                     </div>
                     <div class="carousel-dots" id="carouselDots">
                         <span class="dot active" data-index="0"></span>
                         <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
                     </div>
                 </div>
             </div>
@@ -807,7 +809,7 @@
 
             function goTo(index) {
                 current = (index + slides.length) % slides.length;
-                track.style.transform = 'translateX(-' + (current * 100) + '%)';
+                slides.forEach((s, i) => s.classList.toggle('active', i === current));
                 dots.forEach((d, i) => d.classList.toggle('active', i === current));
             }
 
