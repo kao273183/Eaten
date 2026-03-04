@@ -162,45 +162,24 @@ nav {
     gap: 15px;
 }
 
-.store-btn {
-    display: flex;
+.badge-link {
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background: #000;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 12px;
     transition: opacity 0.2s;
-    cursor: pointer;
 }
 
-.store-btn:hover {
-    opacity: 0.8;
+.badge-link:hover {
+    opacity: 0.82;
 }
 
-.store-btn.disabled {
-    background: #ccc;
-    cursor: not-allowed;
-    opacity: 0.7;
+.store-badge {
+    height: 44px;
+    width: auto;
+    display: block;
 }
 
-.store-btn i {
-    font-size: 24px;
-}
-
-.store-btn div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.store-btn span {
-    font-size: 10px;
-}
-
-.store-btn strong {
-    font-size: 16px;
-    line-height: 1.2;
+.store-badge.googleplay {
+    height: 66px;
 }
 
 /* ── Phone Carousel (Hero) ────────────────────────────── */
@@ -469,20 +448,6 @@ nav {
     opacity: 0.9;
 }
 
-.white-btn {
-    background: white;
-    color: #3D2B1F;
-}
-
-.white-btn:hover {
-    background: #f0ebe6;
-    opacity: 1;
-}
-
-.white-btn.disabled {
-    background: rgba(255, 255, 255, 0.5);
-    color: #666;
-}
 
 .centered {
     justify-content: center;
@@ -865,8 +830,8 @@ footer {
         height: 380px;
     }
 
-    .store-btn {
-        width: 100%;
+    .cta-buttons {
+        flex-wrap: wrap;
         justify-content: center;
     }
 
@@ -950,14 +915,6 @@ footer {
     border-top-color: rgba(255, 255, 255, 0.07);
 }
 
-[data-theme="dark"] .white-btn {
-    background: #2A201B;
-    color: #F0E6DE;
-}
-
-[data-theme="dark"] .white-btn:hover {
-    background: #3A2D26;
-}
 
 /* ── Hamburger & Mobile Nav ───────────────────────────── */
 .hamburger {
